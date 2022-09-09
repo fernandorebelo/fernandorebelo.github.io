@@ -1,0 +1,27 @@
+.navbar-brand {
+  width: 50px;
+}
+
+.img-fluid {
+  width: 200px;
+}
+
+#calculadora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  background-color: rgb(158, 158, 158);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  margin-top: 20px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
+}

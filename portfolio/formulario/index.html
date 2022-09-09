@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <title>Banco de talentos - Formulário</title>
+  </head>
+
+  <style>
+    .header {
+      background-image: url(./assets/image/samantha-gades-BlIhVfXbi9s-unsplash.jpg);
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    nav {
+      background-color: green;
+      margin-top: 50px;
+    }
+  </style>
+
+  <body>
+    <!--Importando Script Jquery-->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+
+    <div class="container text-center pt-3 pb-3">
+      <!-- Cabeçalho header -->
+      <div class="header">
+        <div class="header-nome d-flex justify-content-center">
+          <h1 class="header-text pt-5">Empresa - Banco de talentos</h1>
+        </div>
+
+        <!-- Navegador menu -->
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Vagas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cadastrar currículo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Fim Navegador menu -->
+      </div>
+      <!-- Fim cabeçalho header -->
+
+      <div class="card p-5 d-flex align-items-center">
+        <div class="row p-1 text-start d-flex align-items-center">
+          <div class="col">
+            <div class="row">
+              <h1 class="text-center">Formulário de cadastro</h1>
+            </div>
+
+            <form action="#" method="get" class="col p-5">
+              <!-- Dados pessoais -->
+              <hr />
+              <h2 class="text-center">Dados pessoais</h2>
+
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="curriculo"
+                      >Currículo</label
+                    >
+                    <input type="file" class="form-control" id="curriculo" />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="nome">Nome</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nome completo"
+                      id="nome"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="nascimento"
+                      >Data de nascimento</span
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Nome completo"
+                      id="nascimento"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label
+                      for="estadoCivil"
+                      class="input-group-text"
+                      id="estadoCivil"
+                      >Estado civil</label
+                    >
+                    <select
+                      class="form-select"
+                      aria-label="Estado civil"
+                      id="estadoCivil"
+                      required
+                    >
+                      <option selected disabled>Escola uma opção</option>
+                      <option value="solteiro">Solteiro</option>
+                      <option value="casado">Casado</option>
+                      <option value="uniaoEstavel">União estável</option>
+                      <option value="divorciado">Divorciado</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="etnia" class="input-group-text" id="etnia"
+                      >Etnia</label
+                    >
+                    <select
+                      class="form-select"
+                      aria-label="Cor Etnia"
+                      id="etnia"
+                      required
+                    >
+                      <option selected disabled>Escola uma opção</option>
+                      <option value="branco">Branco</option>
+                      <option value="preto">Preto/Negro</option>
+                      <option value="indigena">Indígena</option>
+                      <option value="amarelo">Amarelo</option>
+                      <option value="pardo">Pardo</option>
+                      <option value="naoDeclarado">Não declarar</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="genero" class="input-group-text">Gênero</label>
+                    <select
+                      class="form-select"
+                      aria-label="Gênero"
+                      id="genero"
+                      required
+                    >
+                      <option selected disabled>Escola uma opção</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="feminino">Feminino</option>
+                      <option value="nãoInformado">Não informar</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Fim Dados para contato -->
+
+              <!-- Dados para contato -->
+              <hr />
+              <h2 class="text-center">Dados para contato</h2>
+
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="email" class="input-group-text">E-mail</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                      pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
+                      placeholder="fulano@fulano.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="telefone" class="input-group-text"
+                      >Telefone</label
+                    >
+                    <input
+                      type="tel"
+                      name="telefone"
+                      id="telefone"
+                      class="form-control"
+                      placeholder="(xx) 9xxxx-xxxx"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="autorizar" class="input-group-text"
+                      >Podemos contatar via WhatsApp?</label
+                    >
+                    <select
+                      name="autorizar"
+                      id="autorizar"
+                      class="form-control"
+                      required
+                    >
+                      <option value="sim">Sim</option>
+                      <option value="nao">Não</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Fim Dados para contato -->
+
+              <!-- Endereço -->
+              <hr />
+              <h2 class="text-center">Endereço</h2>
+
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="cep" class="input-group-text">CEP</label>
+                    <input
+                      type="text"
+                      name="cep"
+                      id="cep"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="logradouro" class="input-group-text">Rua</label>
+                    <input
+                      type="text"
+                      name="rua"
+                      id="logradouro"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="numero" class="input-group-text">Número</label>
+                    <input
+                      type="text"
+                      name="numero"
+                      id="numero"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="complemento" class="input-group-text"
+                      >Complemento</label
+                    >
+                    <input
+                      type="text"
+                      name="complemento"
+                      id="complemento"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="bairro" class="input-group-text">Bairro</label>
+                    <input
+                      type="text"
+                      name="bairro"
+                      id="bairro"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="cidade" class="input-group-text">Cidade</label>
+                    <input
+                      type="text"
+                      name="cidade"
+                      id="cidade"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="input-group mb-3">
+                    <label for="uf" class="input-group-text">Estado</label>
+                    <select id="uf" class="form-select">
+                      <option value="" disabled selected>
+                        Escolha um estado
+                      </option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- FIM Endereço -->
+
+              <!-- Redes sociais -->
+              <hr />
+              <h2 class="text-center">Redes sociais</h2>
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="linkedin">LinkedIn</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Insira a URL"
+                      id="linkedin"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="linkedin">GitHub</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Insira a URL"
+                      id="linkedin"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="linkedin"
+                      >Instagram</span
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Insira a URL"
+                      id="linkedin"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="linkedin">Twitter</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Insira a URL"
+                      id="linkedin"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Fim redes sociais -->
+
+              <!-- Formação -->
+              <hr />
+              <h2 class="text-center">Formação</h2>
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="escolaridade"
+                      >Escolaridade</label
+                    >
+                    <select
+                      class="form-select"
+                      id="escolaridade"
+                      onchange="ativarForm()"
+                    >
+                      <option selected disabled>Escolha uma opção</option>
+                      <option value="Fundamental">Fundamental</option>
+                      <option value="Fundamental incompleto">
+                        Fundamental incompleto
+                      </option>
+                      <option value="médio">Médio</option>
+                      <option value="médio incompleto">Médio incompleto</option>
+                      <option value="superior">Superior</option>
+                      <option value="superior incompleto">
+                        Superior incompleto
+                      </option>
+                      <option value="pós-mba">Pós-graduação/MBA</option>
+                      <option value="pós-mba-incompleto">
+                        Pós-graduação/MBA incompleto
+                      </option>
+                      <option value="mestrado">Mestrado</option>
+                      <option value="mestrado incompleto">
+                        Mestrado incompleto
+                      </option>
+                      <option value="outroCurso">Outro</option>
+                    </select>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputOutroCurso"
+                        placeholder="Outro curso..."
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="especializacao"
+                      >Está realizando alguma especialização/curso?</span
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="especializacao"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Fim formação -->
+
+              <!-- Dados do cargo pretendido -->
+              <hr />
+              <h2 class="text-center">Informações para o cargo pretendido</h2>
+
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="conhecimento"
+                      >Nível de conhecimento</label
+                    >
+                    <select
+                      class="form-select"
+                      id="conhecimento"
+                      onchange="ativarForm()"
+                    >
+                      <option value="" disabled selected>
+                        Escolha uma opção
+                      </option>
+                      <option value="estagio">Estagiário</option>
+                      <option value="junior">Junior</option>
+                      <option value="pleno">Pleno</option>
+                      <option value="senior">Senior</option>
+                      <option value="outroNivel">Outro</option>
+                    </select>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        id="inputNivel"
+                        placeholder="Outro nível de conhecimento..."
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="cargo"
+                      >Cargo pretendido</label
+                    >
+                    <select
+                      class="form-select"
+                      id="cargo"
+                      onchange="ativarForm()"
+                    >
+                      <option value="" disabled selected>
+                        Escolha uma opção
+                      </option>
+                      <option value="backend">Backend</option>
+                      <option value="frontend">Front-end</option>
+                      <option value="fullstack">Fullstack</option>
+                      <option value="outroCargo">Outro</option>
+                    </select>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        id="inputCargo"
+                        placeholder="Outro cargo pretendido..."
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="cargo"
+                      >Stack desejada</label
+                    >
+                    <select
+                      class="form-select"
+                      id="stack"
+                      onchange="ativarForm()"
+                    >
+                      <option value="" disabled selected>
+                        Escolha uma opção
+                      </option>
+                      <option value="java">Java</option>
+                      <option value="php">Php</option>
+                      <option value="c">C / C++</option>
+                      <option value="c#">C#</option>
+                      <option value="outroStack">Outro</option>
+                    </select>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        name=""
+                        class="form-control"
+                        id="inputStack"
+                        placeholder="Outra stack..."
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="turno"
+                      >Turno disponível</label
+                    >
+                    <select class="form-select" id="turno">
+                      <option value="" disabled selected>
+                        Escolha uma opção
+                      </option>
+                      <option value="matutino">Matutino</option>
+                      <option value="vespertino">Vespertino</option>
+                      <option value="noturno">Noturno</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="tipoTrabalho"
+                      >Tipo de trabalho</label
+                    >
+                    <select class="form-select" id="tipoTrabalho">
+                      <option value="" disabled selected>
+                        Escolha uma opção
+                      </option>
+                      <option value="remoto">Remoto</option>
+                      <option value="presencial">Presencial</option>
+                      <option value="hibrido">Híbrido</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="deficiencia"
+                      >Possui alguma deficiência? PCD</label
+                    >
+                    <select class="form-select" id="tipoTrabalho">
+                      <option value="" disabled selected>
+                        Escolha uma opção
+                      </option>
+                      <option value="nao">Não</option>
+                      <option value="sim">Sim</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="salario"
+                      >Pretensão salarial</label
+                    >
+                    <span class="input-group-text">R$</span>
+                    <input
+                      type="text"
+                      name="salario"
+                      id="salario"
+                      class="form-control"
+                      placeholder="0,00"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Fim de Dados do cargo pretendido -->
+
+              <!-- Último ou atual emprego -->
+              <hr />
+              <h2 class="text-center">Último/atual emprego</h2>
+
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="empresa"
+                      >Empresa</label
+                    >
+                    <input
+                      type="text"
+                      name="empresa"
+                      id="empresa"
+                      class="form-control"
+                      placeholder="Nome da empresa"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="cargo">Cargo</label>
+                    <input
+                      type="text"
+                      name="cargo"
+                      id="cargo"
+                      class="form-control"
+                      placeholder="Cargo na empresa"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="atribuicoes"
+                      >Atribuições dentro da empresa</label
+                    >
+                    <input
+                      type="text"
+                      name="cargo"
+                      id="atribuicoes"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="dataEntrada"
+                      >Data de entrada</label
+                    >
+                    <input
+                      type="date"
+                      name="dataEntrada"
+                      id="dataEntrada"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="dataSaida"
+                      >Data de saída</label
+                    >
+                    <input
+                      type="date"
+                      name="dataSaida"
+                      id="dataSaida"
+                      class="form-control"
+                      onchange="checkDate(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 form-check">
+                  <div class="input-group mb-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="atualmente"
+                        onclick="onCheck(this)"
+                      />
+                      <label class="form-check-label" for="atualmente">
+                        Atualmente
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fim do último ou atual emprego -->
+              <hr />
+              <input type="submit" value="Enviar" />
+              <input type="reset" value="Limpar campos" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $('#cep').focusout(function () {
+        $.ajax({
+          url: 'https://viacep.com.br/ws/' + $(this).val() + '/json/',
+          dataType: 'json',
+          success: function (resposta) {
+            $('#logradouro').val(resposta.logradouro)
+            $('#bairro').val(resposta.bairro)
+            $('#cidade').val(resposta.localidade)
+            $('#uf').val(resposta.uf)
+            $('#numero').focus()
+          }
+        })
+      })
+    </script>
+    <script>
+      function ativarForm() {
+        var opcaoEscolaridade = document.getElementById('escolaridade').value
+        var opcaoNivelConhecimento =
+          document.getElementById('conhecimento').value
+        var opcaoCargo = document.getElementById('cargo').value
+        var opcaoStack = document.getElementById('stack').value
+
+        if (opcaoEscolaridade == 'outroCurso') {
+          document.getElementById('inputOutroCurso').disabled = false
+        } else {
+          document.getElementById('inputOutroCurso').disabled = true
+        }
+
+        if (opcaoNivelConhecimento == 'outroNivel') {
+          document.getElementById('inputNivel').disabled = false
+        } else {
+          document.getElementById('inputNivel').disabled = true
+        }
+
+        if (opcaoCargo == 'outroCargo') {
+          document.getElementById('inputCargo').disabled = false
+        } else {
+          document.getElementById('inputCargo').disabled = true
+        }
+
+        if (opcaoStack == 'outroStack') {
+          document.getElementById('inputStack').disabled = false
+        } else {
+          document.getElementById('inputStack').disabled = true
+        }
+      }
+    </script>
+
+    <script>
+      function onCheck(checkbox) {
+        var dateElement = document.getElementById('dataSaida')
+        dateElement.disabled = checkbox.checked
+        if (checkbox.checked) {
+          dateElement.value = ''
+        } else {
+          dateElement.value = ''
+        }
+      }
+    </script>
+  </body>
+</html>
